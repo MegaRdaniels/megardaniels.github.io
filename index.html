@@ -318,7 +318,104 @@ display: inline;
 <br><h2>taking a powerful talisman. Meanwhile, a shadow organization documents</h2> 
 <br><h2>shadow organization documents their every move.</h2>
 <br><h2>RELEASE: N/A</h2>
-<br><img src="https://i.imgur.com/VHG93VW.png" width="135" height="36"><img src="https://i.imgur.com/4ThxG34.png" height="38" height="36"><a href="#"><img src="https://i.imgur.com/ZykxMvX.jpg" height="38" height="36"></a> 				
+<br><img src="https://i.imgur.com/VHG93VW.png" width="135" height="36"><img src="https://i.imgur.com/4ThxG34.png" height="38" height="36"><a href="#"><img src="https://i.imgur.com/ZykxMvX.jpg" height="38" height="36"></a> 		
+
+<div class="dropdown">
+  <span class="dropdown__name">
+    CHOOSE VARIANT COVER
+  </span>
+  <div class="dropdown__content">
+    <a href="#" class="dropdown__link--1">VARIANT 1</a>
+    <a href="#" class="dropdown__link--2">VARIANT 2</a>
+    <a href="#" class="dropdown__link--3">VARIANT 3</a>
+  </div>
+</div>
+					 
+	<style>
+					 :root{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+					 
+.dropdown{
+  margin-top: -100px;
+  position: relative;
+  padding: 1.5em 3em;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, .3);
+  transition: all .2s ease;
+}
+
+.dropdown:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 2px 10px -2px white;
+}
+
+.dropdown__name{
+  color: rgba(255, 255, 255, .8);
+  transition: color .2s ease;
+}
+
+.dropdown:hover .dropdown__name{
+  color: white;
+}
+
+.dropdown__content{
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  bottom: -300%;
+  left: 0;
+  transform: scale(0);
+ }
+
+.dropdown:hover .dropdown__content{
+  transform: scale(1);
+}
+
+.dropdown__content>*{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% / 3);
+  width: 100%;
+  border: 1px solid white;
+  border-bottom: none;
+  text-decoration: none;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform .2s ease, opacity .3s ease, text-decoration .1s;
+  color: white;
+}
+
+
+.dropdown:hover .dropdown__content > * {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.dropdown__content > *:hover{
+  text-decoration: underline;
+}
+
+.dropdown__link--1{
+  
+}
+
+.dropdown__link--2{
+  top: calc(100% / 3);
+  transition-delay: .15s;
+}
+.dropdown__link--3{
+  top: calc(100% / 3 * 2);
+  border-bottom: 1px solid white;
+  transition-delay: .3s;
+}
 	
 <br>												     
 <br>
@@ -330,7 +427,6 @@ display: inline;
             width:200px;
             height:200px;
             position: fixed;
-            background-color: blue;
             top: 50%;
             left: 50%;
             margin-top: -100px;
