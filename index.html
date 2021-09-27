@@ -271,7 +271,7 @@ display: inline;
 				<br>
 
 
-<div class="box">
+<div class="box" style="float: left;" >
   <div class="header"><i class="fa fa-paper-plane" aria-hidden="true"></i>
     <p class="hidden">Thanks!</p>
   </div>
@@ -369,8 +369,28 @@ input {
 .box .form {
   padding-top: 90px;
 }				       
-						       
-		</style>					       									       	    					
+			
+		</style>
+			
+	<script>
+			
+		var button = document.querySelector('.button');
+var field = document.querySelector('.field');
+var icon = document.querySelector('.header i');
+var text = document.querySelector('.header p');
+
+button.addEventListener('click', function(){
+  
+  if(field.value === ''){
+    field.placeholder = 'earthman270@yahoo.com';
+    // alert('You must enter an email');
+  } else {
+    icon.classList.toggle('animation');
+    text.classList.toggle('show');
+  }
+});		
+			
+			</script>		
 									       
     <img id = "myImage" onclick = "changeImage()" src="https://i.imgur.com/zJBpLVs.png" width="210" height="334">
      <script>
