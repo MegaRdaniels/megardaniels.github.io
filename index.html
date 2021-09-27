@@ -318,38 +318,130 @@ display: inline;
 <br><h2>taking a powerful talisman. Meanwhile, a shadow organization documents</h2> 
 <br><h2>their every move.</h2>
 <br><h2>PRICE: $5.00 US</h2>
-<br
-	       					     
-<button>
-INDIEGOGO
-</button>	       
-	       
+<br>
+						     
+<div class="dark">
+  <div class="row">
+    <button type="button" class="btn gradient pink">Button</button>
+    <button type="button" class="btn gradient purple">Button</button>
+    <button type="button" class="btn gradient green">Button</button>
+    <button type="button" class="btn gradient blue">Button</button>
+  </div>
+</div>
+
 <style>
-						  
-		button {
-			width: 200px;
-			height: 40px;
-			color: #ff00dd;
-			font-size: 20px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			border-radius: 0;
-			border: none;
-			border-top: 2px solid #ff00dd;
-			border-bottom: 2px solid #ff00dd;
-			outline: none;
-			background: transparent;
-			transition: 0.5s;
-		}
-		button:hover {
-			box-shadow: 0 0 5px #ff00dd,
-			0 0 10px #ff00dd,
-			0 0 30px #ff00dd,
-			0 0 60px #ff00dd,
-			0 0 120px #ff00dd;
-			background: #ff00dd;
-			color: #112;
-		}
+						   
+						   :root {
+  --pink-dark: linear-gradient(to right, #fcfb9a, #fffb00); 
+  --pink: linear-gradient(to left, #DD2476, #FF512F); 
+
+  --purple-dark: linear-gradient(to left, #fcfb9a, #fffb00); 
+  --purple: linear-gradient(to left, #61045F, #AA076B); 
+
+  --green-dark:  linear-gradient(to left, #fa9bea, #ff00d4);
+  --green: linear-gradient(to left, #061700, #52c234); 
+    
+  --blue-dark: linear-gradient(to left, #5433FF, #20BDFF); 
+  --blue:linear-gradient(to right, #004e92, #000428); 
+  
+  --gray: #1c1c1c;
+  --white: rgba(250, 250, 250, 0.8);
+}
+
+.dark {
+  min-height: 50vh;
+  background: #100f0f;
+}
+
+.row {
+  justify-content: center;
+}
+
+.btn {
+  margin: 2rem;
+}
+
+.gradient {
+  border: solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+
+/** Dark Theme Buttons */
+.dark .pink {
+   background: var(--pink-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: var(--pink-dark);
+  text-decoration: none;
+}
+
+.dark .pink:hover, .dark .pink:focus {
+  border: 5px solid var(--gray);
+  background: var(--pink-dark);
+  -webkit-text-fill-color: var(--gray);
+  border-bottom: 3px solid var(--gray);
+  text-decoration: underline;
+  font-weight: 500;
+  box-shadow: #222 1px 0 10px;
+}
+
+
+.dark .purple {
+   background: var(--purple-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: var(--purple-dark);
+  text-decoration: none;
+}
+
+.dark .purple:hover, .dark .purple:focus {
+  border: 5px solid var(--gray);
+  background: var(--purple-dark);
+  -webkit-text-fill-color: var(--gray);
+  border-bottom: 3px solid var(--gray);
+  text-decoration: underline;
+  font-weight: 500;
+  box-shadow: #222 1px 0 10px;
+}
+
+.dark .green {
+   background: var(--green-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: var(--green-dark);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.dark .green:hover, .dark .green:focus {
+  border: 5px solid var(--gray);
+  background: var(--green-dark);
+  -webkit-text-fill-color: var(--gray);
+  text-decoration: underline;
+  font-weight: 500;
+  box-shadow: #222 1px 0 10px;
+}
+
+.dark .blue {
+   background: var(--blue-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: var(--blue-dark);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.dark .blue:hover, .dark .blue:focus {
+  border: 5px solid var(--gray);
+  background: var(--blue-dark);
+  -webkit-text-fill-color: var(--gray);
+  text-decoration: underline;
+  font-weight: 500;
+  box-shadow: #222 1px 0 10px;
+}
+	       					     
+
 						     
 						     </style>
 	       
