@@ -270,127 +270,151 @@ display: inline;
     </style>
 				<br>
 
+<a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        NWOLFDIGITAL
+    </a>
+	   <br>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        NWOLFDIGITAL
+    </a>
+	   <br>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        NWOLFDIGITAL
+    </a>
+	
+		<style>
+	       
+	       @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #212121;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fa6900;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+a:hover{
+    background: #fa6900;
+    color: #fff;
+    box-shadow: 0 0 5px #fa6900,
+                0 0 25px #fa6900,
+                0 0 50px #fa6900,
+                0 0 200px #fa6900;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#fa6900);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#fa6900);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#fa6900);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
 
-<div class="box" style="float: left;" >
-  <div class="header"><i class="fa fa-paper-plane" aria-hidden="true"></i>
-    <p class="hidden">Thanks!</p>
-  </div>
-  <div class="form">
-  <input type="text" placeholder="Your Email" class="field">
-  <input type="button" value="Subscribe" class="button">
-  </div>
-</div>
-						       
-	<style>
-						       
-		.box {
-  width: 300px;
-  box-shadow: 0px 10px 30px rgba(255,255,0,0.4);
-  display: block;
-  margin: auto;
-  margin-top: 15px;
-  border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  padding: 10px 15px 15px 15px;
-  background: #fff;
-  position: relative;
-}
-input {
-  display: block;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  margin: auto;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #000000;
-  box-sizing: border-box;
-  outline: none;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
-}
-.button {
-  border-radius: 100px;
-  border: none;
-  padding: 16px;
-  font-weight: bold;
-  background: #f6ffa1;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition:all .3s;
-}
-.button:hover {
-  background: #f6ff00;
-  color: #fff;
-}
 
-.field {
-  border-radius: 100px;
-  border: none;
-  padding: 16px;
-  background: transparent;
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#fa6900);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
-.hidden {
-  visibility: hidden;
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
 }
-.show {
-  visibility: visible;
-}
-.header {
-  position: absolute;
-  background: #fbe200;
-  width: 100%;
-  height:60px;
-  padding:20px 0; 
-  left:0;
-  top:0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  color:#fff;
-  text-align:center;
-  font-size:3em;
-  overflow:hidden;
-}
-.header p {
-  margin:0;
-  position:absolute;
-  top:20%;
-  left:28%;
-  font-size:40px;
-}
-
-.animation {
-  position:absolute;
-  animation: mymove 0.5s forwards;
-}
-
-@keyframes mymove {
-  0%   {left: 50%;}
-  100%  {left: 120%; as}
-}
-.box .form {
-  padding-top: 90px;
-}				       
-			
-		</style>
-			
-	<script>
-			
-		var button = document.querySelector('.button');
-var field = document.querySelector('.field');
-var icon = document.querySelector('.header i');
-var text = document.querySelector('.header p');
-
-button.addEventListener('click', function(){
-  
-  if(field.value === ''){
-    field.placeholder = 'earthman270@yahoo.com';
-    // alert('You must enter an email');
-  } else {
-    icon.classList.toggle('animation');
-    text.classList.toggle('show');
-  }
-});		
-			
-			</script>		
+     
+	       </style>
 									       
     <img id = "myImage" onclick = "changeImage()" src="https://i.imgur.com/zJBpLVs.png" width="210" height="334">
      <script>
