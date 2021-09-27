@@ -332,13 +332,13 @@ display: inline;
 <style>
 						   
 						   :root {
-  --pink-dark: linear-gradient(to right, #fcfb9a, #fffb00); 
+  --yellow-dark: linear-gradient(to right, #fcfb9a, #fffb00); 
   --pink: linear-gradient(to left, #DD2476, #FF512F); 
 
-  --purple-dark: linear-gradient(to left, #fcfb9a, #fffb00); 
+  --yellow-dark: linear-gradient(to left, #fcfb9a, #fffb00); 
   --purple: linear-gradient(to left, #61045F, #AA076B); 
 
-  --green-dark:  linear-gradient(to left, #fa9bea, #ff00d4);
+  --pink-dark:  linear-gradient(to left, #fa9bea, #ff00d4);
   --green: linear-gradient(to left, #061700, #52c234); 
     
   --blue-dark: linear-gradient(to left, #5433FF, #20BDFF); 
@@ -368,7 +368,7 @@ display: inline;
 }
 
 /** Dark Theme Buttons */
-.dark .pink {
+.dark .yellow {
    background: var(--pink-dark);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -376,9 +376,9 @@ display: inline;
   text-decoration: none;
 }
 
-.dark .pink:hover, .dark .pink:focus {
+.dark .yellow:hover, .dark .yellow:focus {
   border: 5px solid var(--gray);
-  background: var(--pink-dark);
+  background: var(--yellow-dark);
   -webkit-text-fill-color: var(--gray);
   border-bottom: 3px solid var(--gray);
   text-decoration: underline;
@@ -387,17 +387,17 @@ display: inline;
 }
 
 
-.dark .purple {
+.dark .pink {
    background: var(--purple-dark);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  border-image-source: var(--purple-dark);
+  border-image-source: var(--pink-dark);
   text-decoration: none;
 }
 
 .dark .purple:hover, .dark .purple:focus {
   border: 5px solid var(--gray);
-  background: var(--purple-dark);
+  background: var(--pink-dark);
   -webkit-text-fill-color: var(--gray);
   border-bottom: 3px solid var(--gray);
   text-decoration: underline;
