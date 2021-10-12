@@ -333,18 +333,19 @@ display: inline;
 	 								   
 								   
 	<script type="text/javascript">
-		function changeImage() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("OIle6UP")) {
-        image.src = "https://i.imgur.com/fcfznDp.png";
-    } else {
-        image.src = "https://i.imgur.com/Glpyl7G.png";
-    }
-		       
-    } else {
-        image.src = "https://i.imgur.com/OIle6UP.png";
-    }	       
-}
+
+	function imagefun() {
+            var Image_Id = document.getElementById('getImage');
+            if (Image_Id.src.match("https://i.imgur.com/OIle6UP.png")) {
+                Image_Id.src = "https://i.imgur.com/Glpyl7G.png";
+                Image_Id.src = "https://i.imgur.com/fcfznDp.png";
+            }
+            else {
+                Image_Id.src = "https://i.imgur.com/OIle6UP.png";
+            }
+        }     			      
+				      
+				      
 		</script>							   
      				
 														   
