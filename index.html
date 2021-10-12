@@ -373,7 +373,81 @@ display: inline;
 <br><h2>PRICE: $5.00 US</h2>
 <br>	
 <br>	
-						     
+	<div id="all">
+  <div id="bar">
+    <div id="likes"></div>
+    <div id="dislikes"></div>
+  </div>
+  <input class="button button-like" type="button" value="like" onclick="like()" />
+  <input class="button button-dislike"  type="button" value="dislike" onclick="dislike()" />
+</div>
+											 
+	<style>
+											 
+  #all{
+  widh: 100%;
+  text-align: center;
+  
+  #bar{
+    background: #CC5955;
+    margin-bottom: .5rem;
+  }
+  #likes{
+    height:10px;
+    width: 50%;
+    background: #67BA46;
+    border-right: 4px solid #eee;
+  }
+}
+
+.button{
+  border-radius: 3px;
+  color: #fff;
+  border: 1px solid rgba(0,0,0,.1);
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  
+  &-like{
+    background: #67BA46;
+  }
+  &-dislike{
+    background: #CC5955;
+  }
+}
+										 
+					</style>		
+											 
+		<script type="text/javascript">									 
+			let likes=0, dislikes=0, percentageLikes=50;
+
+calculateBar();
+
+function like(){
+  likes++;
+  calculateBar();
+}
+function dislike(){
+  dislikes++;
+  calculateBar();
+}
+function calculateBar(){
+  let total = likes+dislikes;
+  let percentageLikes = Math.floor((likes/total)*100);
+  //var percentageDislikes = (dislikes/total)*100;
+  
+  document.getElementById('likes').style.width = percentageLikes + '%';
+  
+  console.log('likes: ' + likes, 'dislikes: ' + dislikes, 'percent:' + percentageLikes + '%');
+  
+}
+			</script>					 
+											 
+											 
+											 
+											 
+											 
+											 
+											 
 			<div style="float: left;">
 			 	<a href="#"><button>Buy the Print</button></a>
 				<a href="#"><button>Get the E-Book</button></a>
