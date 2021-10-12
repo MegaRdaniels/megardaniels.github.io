@@ -342,6 +342,8 @@ display: inline;
 }
 		
 						     </script>	
+	<br>					     
+	<br>				     
   <img id = "myImage" onclick = "changeImage()" src="https://i.imgur.com/OIle6UP.png" width="263" height="418">						     
 <br>						     
 <h1><strong>RISE OF THE SKY-TITANS #1</strong></h1>
@@ -373,120 +375,6 @@ display: inline;
 <br><h2>PRICE: $5.00 US</h2>
 <br>	
 <br>	
-	<div id="app"></div>
-		     <style>
-		     	.like-button, .dislike-button {
-			margin: 50px;
-			border-radius: 5px;
-			}
-			.liked, .disliked {
-			background-color: green;
-			color: white;
-			}
-		     </style>
-		     
-		     <div id="app"></div>
-				  
-				  <style> 
-				  
-.like-button, .dislike-button {
-	margin: 50px;
-	border-radius: 5px;
-}
-.liked, .disliked {
-	background-color: green;
-	color: white;
-}  
-				  </style>
-				  
-	<script type="text/javascript">	
-				class Button extends React.Component {
-	constructor(props) {
-		super(props);
-		
-		this.state = {
-			like: 0,
-			dislike: 0,
-			likeClass: false,
-			dislikeClass: false
-		}
-	}
-
-	handleLike = () => {
-		const { like, dislike, likeClass, dislikeClass } = this.state;
-		
-		if (!likeClass) {
-			this.setState({
-				like: this.state.like + 1,
-				likeClass: true
-			})
-		} else {
-			this.setState({
-				like: this.state.like - 1,
-				likeClass: false
-			})
-		}
-		if (!likeClass && dislikeClass) {
-			this.setState({
-				like: this.state.like + 1,
-				dislike: this.state.dislike - 1,
-				likeClass: true,
-				dislikeClass: false
-			})
-		}
-	}
-	
-	handleDislike = () => {
-		const { like, dislike, likeClass, dislikeClass } = this.state;
-		
-		if (!dislikeClass) {
-			this.setState({
-				dislike: this.state.dislike + 1,
-				dislikeClass: true
-			})
-		} else {
-			this.setState({
-				dislike: this.state.dislike - 1,
-				dislikeClass: false
-			})
-		}
-		if (!dislikeClass && likeClass) {
-			this.setState({
-				like: this.state.like - 1,
-				dislike: this.state.dislike + 1,
-				likeClass: false,
-				dislikeClass: true
-			})
-		}
-	}
-	
-	render() {
-		const { like, dislike, likeClass, dislikeClass } = this.state;
-		
-		return (
-			<div>
-				<button
-					type="button"
-					className={likeClass ? "like-button liked" : "like-button"}
-					onClick={this.handleLike}
-				>
-					<span>{like}</span> Like
-				</button>
-				<button
-					type="button"
-					className={dislikeClass ? "dislike-button disliked" : "dislike-button"}
-					onClick={this.handleDislike}
-				>
-					<span>{dislike}</span> Dislike
-				</button>
-			</div>
-		)
-	}
-}
-
-ReactDOM.render(<Button />, document.querySelector("#app"))      
-		
-				      </script>
 											 
 			<div style="float: left;">
 			 	<a href="#"><button>Buy the Print</button></a>
