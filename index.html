@@ -332,20 +332,28 @@ display: inline;
 </script>								   
 								   
 	<script type="text/javascript">
-		function changeImage() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("Glpyl7G")) {
-        image.src = "https://i.imgur.com/OIle6UP.png";
-    } else {
-        image.src = "https://i.imgur.com/Glpyl7G.png";
-    }
-}
-		
+	position=0;
+var tLight = ["https://i.imgur.com/OIle6UP.png","https://i.imgur.com/Glpyl7G.png","https://i.imgur.com/fcfznDp.png"]					     
+	function changeImage() {
+if (position==0) {
+document.getElementById('myImage').innerHTML=tLight[1]
+position=1;
+}    
+else if (position==1) {
+document.getElementById('myImage').innerHTML=tLight[2]
+position=2;
+}    
+else if (position==2) {
+document.getElementById('myImage').innerHTML=tLight[3]
+position=3;
+}            					     
+}		
 						     </script>	
+														   
  <img style="float:initial"; src="https://i.imgur.com/mA3LgyG.png" width="160" height="77">
 <br>
 <br>							    
-  <img id = "myImage" onclick = "changeImage()" src="https://i.imgur.com/OIle6UP.png" width="263" height="418">						     
+ <img id="myImage" src="https://i.imgur.com/OIle6UP.png" width="263" height="418">						     
 <br>
 <br>					     												      
 <h1><strong>RISE OF THE SKY-TITANS #1</strong></h1>
