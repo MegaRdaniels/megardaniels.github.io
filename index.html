@@ -373,80 +373,120 @@ display: inline;
 <br><h2>PRICE: $5.00 US</h2>
 <br>	
 <br>	
-	<div id="all">
-  <div id="bar">
-    <div id="likes"></div>
-    <div id="dislikes"></div>
-  </div>
-  <input class="button button-like" type="button" value="like" onclick="like()" />
-  <input class="button button-dislike"  type="button" value="dislike" onclick="dislike()" />
-</div>
-											 
-	<style>
-											 
-  #all{
-  width: 100%;
-  text-align: center;
-  
-  #bar{
-    background: #CC5955;
-    margin-bottom: .5rem;
-  }
-  #likes{
-    height:10px;
-    width: 50%;
-    background: #67BA46;
-    border-right: 4px solid #eee;
-  }
+	<div id="app"></div>
+		     <style>
+		     	.like-button, .dislike-button {
+			margin: 50px;
+			border-radius: 5px;
+			}
+			.liked, .disliked {
+			background-color: green;
+			color: white;
+			}
+		     </style>
+		     
+		     <div id="app"></div>
+				  
+				  <style> 
+				  
+.like-button, .dislike-button {
+	margin: 50px;
+	border-radius: 5px;
+}
+.liked, .disliked {
+	background-color: green;
+	color: white;
+}  
+				  </style>
+				  
+	<script type="text/javascript">	
+				class Button extends React.Component {
+	constructor(props) {
+		super(props);
+		
+		this.state = {
+			like: 0,
+			dislike: 0,
+			likeClass: false,
+			dislikeClass: false
+		}
+	}
+
+	handleLike = () => {
+		const { like, dislike, likeClass, dislikeClass } = this.state;
+		
+		if (!likeClass) {
+			this.setState({
+				like: this.state.like + 1,
+				likeClass: true
+			})
+		} else {
+			this.setState({
+				like: this.state.like - 1,
+				likeClass: false
+			})
+		}
+		if (!likeClass && dislikeClass) {
+			this.setState({
+				like: this.state.like + 1,
+				dislike: this.state.dislike - 1,
+				likeClass: true,
+				dislikeClass: false
+			})
+		}
+	}
+	
+	handleDislike = () => {
+		const { like, dislike, likeClass, dislikeClass } = this.state;
+		
+		if (!dislikeClass) {
+			this.setState({
+				dislike: this.state.dislike + 1,
+				dislikeClass: true
+			})
+		} else {
+			this.setState({
+				dislike: this.state.dislike - 1,
+				dislikeClass: false
+			})
+		}
+		if (!dislikeClass && likeClass) {
+			this.setState({
+				like: this.state.like - 1,
+				dislike: this.state.dislike + 1,
+				likeClass: false,
+				dislikeClass: true
+			})
+		}
+	}
+	
+	render() {
+		const { like, dislike, likeClass, dislikeClass } = this.state;
+		
+		return (
+			<div>
+				<button
+					type="button"
+					className={likeClass ? "like-button liked" : "like-button"}
+					onClick={this.handleLike}
+				>
+					<span>{like}</span> Like
+				</button>
+				<button
+					type="button"
+					className={dislikeClass ? "dislike-button disliked" : "dislike-button"}
+					onClick={this.handleDislike}
+				>
+					<span>{dislike}</span> Dislike
+				</button>
+			</div>
+		)
+	}
 }
 
-.button{
-  border-radius: 3px;
-  color: #fff;
-  border: 1px solid rgba(0,0,0,.1);
-  padding: .5rem 1rem;
-  text-transform: uppercase;
-  
-  &-like{
-    background: #67BA46;
-  }
-  &-dislike{
-    background: #CC5955;
-  }
-}
-										 
-					</style>		
-											 
-		<script type="text/javascript">									 
-			let likes=0, dislikes=0, percentageLikes=50;
-
-calculateBar();
-
-function like(){
-  likes++;
-  calculateBar();
-}
-function dislike(){
-  dislikes++;
-  calculateBar();
-}
-function calculateBar(){
-  let total = likes+dislikes;
-  let percentageLikes = Math.floor((likes/total)*100);
-  //var percentageDislikes = (dislikes/total)*100;
-  
-  document.getElementById('likes').style.width = percentageLikes + '%';
-  
-  console.log('likes: ' + likes, 'dislikes: ' + dislikes, 'percent:' + percentageLikes + '%');
-  
-}
-			</script>					 
-											 
-											 
-											 
-											 
-											 
-											 
+ReactDOM.render(<Button />, document.querySelector("#app"))      
+		
+				      </script>
 											 
 			<div style="float: left;">
 			 	<a href="#"><button>Buy the Print</button></a>
