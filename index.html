@@ -1,3 +1,5 @@
+<head>
+   
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,524 +24,149 @@
 <meta name="twitter:url" content="https://megacomixpublishing.com/index.html#"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="A place for indie creators to post their work and the home for the indiecomic 'Rise of the Sky-Titans: The Adventure Begins'."/>
-<meta name="description" content="A place for indie creators to post their work and the home for the indiecomic 'Rise of the Sky-Titans: The Adventure Begins'." />		
-<script type="text/javascript">
-//mobile viewport hack
-(function(){
+<meta name="description" content="A place for indie creators to post their work and the home for the indiecomic 'Rise of the Sky-Titans: The Adventure Begins'." />	
 
-  function apply_viewport(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)   ) {
-
-      var ww = window.screen.width;
-      var mw = 800; // min width of site
-      var ratio =  ww / mw; //calculate ratio
-      var viewport_meta_tag = document.getElementById('viewport');
-      if( ww < mw){ //smaller than minimum size
-        viewport_meta_tag.setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=no, width=' + mw);
-      }
-      else { //regular size
-        viewport_meta_tag.setAttribute('content', 'initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=yes, width=' + ww);
-      }
-    }
-  }
-
-  //ok, i need to update viewport scale if screen dimentions changed
-  window.addEventListener('resize', function(){
-    apply_viewport();
-  });
-
-  apply_viewport();
-
-}());
-</script>
-	
-<link rel="icon" type="image/png" href="https://i.imgur.com/eKoInVF.png"/>
-				
-		<style type=""text/css">
-
-* {
-  margin: 0;
-  font-size: 16px;
-  
-}
-
-body{
-  background-image: url("https://i.imgur.com/UXkSOGA.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;							 
-}
-
-
-#navbar{
-  display: grid;
-  background: transparent;
-  width: 100%;
-  
-}
-
-#logo{
-  grid-column: 1;
-  font-size: 3rem;
-  margin-left: 30px;
-  margin-top: 0.25px;
-  text-decoration: overline;
-  color:#00303F;
-  
-}
-
-#secondary-logo{
-  grid-column: 1;
-  font-size: 1.3rem;
-  text-decoration: none;
-  margin-left: 230px;
-  margin-top: 45px;
-  position: absolute;
-  color:#DCAE1D;
-}
-
-#navbarList{
-  display: grid;
-  
-  grid-column: 2;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  text-align: center;
-  list-style: none;
-  margin-top: 45px;
-  margin-right: 10px;
-  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">	
  
+<style>
+
+
+
+ /* For mobile phones: */
+          [class*="col-"] {
+        width: 100%;
+           }
+          @media only screen and (min-width: 600px) {
+         /* For tablets: */
+       .col-m-1 {width: 8.33%;}
+       .col-m-2 {width: 16.66%;}
+       .col-m-3 {width: 25%;}
+       .col-m-4 {width: 33.33%;}
+       .col-m-5 {width: 41.66%;}
+       .col-m-6 {width: 50%;}
+       .col-m-7 {width: 58.33%;}
+      .col-m-8 {width: 66.66%;}
+      .col-m-9 {width: 75%;}
+      .col-m-10 {width: 83.33%;}
+      .col-m-11 {width: 91.66%;}
+      .col-m-12 {width: 100%;}
+         }
+        @media only screen and (min-width: 768px) {
+      /* For desktop: */
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+         }
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+.banner-area{
+    background-image: url('https://i.imgur.com/UXkSOGA.jpg');
+    background-position: center center;
+    background-size:cover ;
+    /* -webkit-background-size:cover ; */
+    height: 100vh;
+    width: auto;
+    margin: auto;
 }
 
-li a {
-  text-decoration: none;
-  color:#ffffff;
-  font-size: 1.1rem;
-  font-family: 'Monserat', arial;
-  text-transform: uppercase;
-  
-  
+.menu{
+    float: left;
+    list-style: none;
+    margin-top:30px;
 }
-
-li a:hover {
-  color: #ffffff;
+.menu ul li{
+    display: inline-block;
 }
-
-li a::before {
- 
-  content: '';
-  display: block;
-  height: 3px;
-  Background: linear-gradient(45deg, #ffffff, rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
-  position: relative;
-  top: -5px;
-  width: 0%;
-  transition: all ease-in-out 250ms;
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: 'poppins' ,sans-serif;
+    font-size: 16px;
 }
-
-li a:hover::before {
-  width: 100%;
-  
+.menu ul li a:hover{
+    color: rgb(199, 139, 255);
 }
-
-
-@media screen and (min-width: 310px) and (max-width: 1140px) { 
-  #navbar{
-    grid-template-rows: 1fr 1fr;  
-    grid-template-columns: 1fr;
-    margin-right: 0;
-  }
-  
-  #navbarList{
-    grid-row: 2;
-    grid-column: 1;
-    padding-left: 10px;
-  }
-  
-  li a{
-    font-size: 1rem;
-    padding-right: 10px;
+/* .logo{
+    height: 20%;
+    float: left;
+    color: azure;
+    list-style: none;
     
-  }
-							 
-.loader,
-.loader:before,
-.loader:after {
-  background: transparent;
-  -webkit-animation: load1 1s infinite ease-in-out;
-  animation: load1 1s infinite ease-in-out;
-  width: 1em;
-  height: 4em;
+} */
+.banner-text{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 10% 30%;
+    text-align: center;
 }
-.loader {
-  color: #ffd500;
-  text-indent: -9999em;
-  margin: 88px auto;
-  position: relative;
-  font-size: 11px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+.banner-text h1{
+    text-align: center;
+    color:rgb(233, 185, 255);
+    
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Comic Neue', cursive;
 }
-.loader:before,
-.loader:after {
-  position: absolute;
-  top: 0;
-  content: '';
+.banner-text p{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Comic Neue', cursive;
 }
-.loader:before {
-  left: -1.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+.banner-text a{
+    border: 3px solid yellow;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
 }
-.loader:after {
-  left: 1.5em;
+.banner-text a:hover{
+    background-color: gold;
+    color: black;
+    font-weight: bold;
 }
-@-webkit-keyframes load1 {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0;
-    height: 4em;
-  }
-  40% {
-    box-shadow: 0 -2em;
-    height: 5em;
-  }
-}
-@keyframes load1 {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0;
-    height: 4em;
-  }
-  40% {
-    box-shadow: 0 -2em;
-    height: 5em;
-  }
-}							 
+
 
 
 </style>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-	     
-#share-buttons img {
-width: 35px;
-padding: 5px;
-border: 0;
-box-shadow: 0;
-display: inline;
-}
-	     
-</style>							 
-							 
-							 
-							 
-<title>Home - MegaComix</title>
+    <title>Home</title>
 </head>
 
 <body>
+    <div class="banner-area">
+    <header>
+           <div class="menu">
+                <ul>
+                    
+                </ul>
+            </div>
 
-<nav id="navbar">
-  <div id="logo"><a href="index.html"><img src="https://i.imgur.com/iofV8hD.png" title="home"/></a></div>
-													  
-
-													  	
-  <ul id="navbarList">
-     <li><a href= "#"> Home </a> </li>
-     <li><a href= "#">Shop</a> </li>
-     <li><a href= "contact.html">Contact</a></li>
-     <li><a href="#">Cast</a></li>
-  </ul> 
-</nav>					
+        </header>
+        <div class="banner-text">
+            <h1><img src="https://i.imgur.com/iofV8hD.png"></h1>
+            <p>The home site for the comic "Rise of the Sky-Titans" and other indie projects. Based off the webcomic from The Duck Webcomic, after failing to bring down the man who murdered his mother in the court of law, an obsessive, struggling private detective, grieved by her death was suddenly murdered by a woman in black. When he was ressurected by the gift his mom gave him, he joins forces with an old flame, Stringy, a bubbly, zany superheroine with the power to transform into a werewolf with a mystical talisman; Pappy, a former US Army Ranger; and Snow White, a former assassin of the Golden Dragon Organization to not only bring down his Mom's murderer, but to also put a stop to a powerful, billionaire mob boss, Bullet, from using these Badges to reawaken the dead for world domination.'</p>
+            <a href="#">PRINT COMIC</a>
+            <a href="#">GO TO STORE</a>
+        </div>
 	
- <style>
-        body {
-            margin: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: gold;
-	    float: left;
-	    font-size: 40px;
-        }
-
-        h2 {
-            color: gold;
-	    float: left;
-	    font-size: 16px;		
-        }
-
-        h3 {
-            color:#ed1479;
-	    float: left;
-        }
-
-        img {
-            float: left; 
-            margin: 9px;
-            cursor: pointer;		
-        }
-				
-        p {
-            text-align: left;
-            font-size: 50px;
-        }
-						
-		</style>		
-
-     <script>
-</script>	
-								   
-	<script type="text/javascript">
-
-	function imagefun() {
-            var Image_Id = document.getElementById('getImage');
-            if (Image_Id.src.match("https://i.imgur.com/ocLoNiG.png")) {
-                Image_Id.src = "https://i.imgur.com/e2b99IX.png";
-                Image_Id.src = "https://i.imgur.com/i2WAmX4.png";
-            }
-            else {
-                Image_Id.src = "https://i.imgur.com/ocLoNiG.png";
-            }
-        }     			      
-				      
-				      
-		</script>				
-																   
-<img style="float:initial"; src="https://i.imgur.com/mA3LgyG.png" width="160" height="77">
-<br>
-<br>							    
-<img src="https://i.imgur.com/ocLoNiG.png" onmouseover="imagefun()" id="getImage" width="302" height="481"> 												  				     												      
-<h1><strong>RISE OF THE SKY-TITANS #1</strong></h1>
-<br>
-<br>
-<br>													  
-<h2>AUTHOR: MegaRdaniels</h2>
-<br>
-<h2>PENCILER: Craig Shepard</h2>
-<br>
-<h2>INKER: Chis Arieswhenda and Riley Webber</h2>
-<br>
-<h2>COLORIST(S): Tom Carter</h2>
-<br>
-<h2>LETTERER: MegaRdaniels</h2>
-<br>
-<h2>RATING: TEEN PLUS</h2>
-<br>						     
-<h2>PAGES: 42 PAGES</h2>
-<br>
-<br>						     
-<h2>DESCRIPTION: In the near future, a small band of monster hunters, a former</h2>
-<br><h2>US Army Ranger, a hitwoman, and a plucky girl who can turn into a werewolf</h2> 
-<br><h2>with a mystical badge, stop a cannibalistic assassin, hired by the mob, from</h2> 
-<br><h2>taking a powerful talisman. Meanwhile, a shadow organization documents</h2> 
-<br><h2>their every move.</h2>
-<br>						     
-<br><h2>PRICE: $5.00 US</h2>
-<br>	
-<br>
-
-	<div style="float: left;">
-				<a href="#"><button><span style="font-family: Arial, Helvetica, sans-serif; color: black;";>Order on Indiegogo</span></button><button><span style="font-family: Arial, Helvetica, sans-serif; color: black;";>Cast</span></button></a> <span style="color:red;"><strong>*Not Available</strong></span>
-					 </div>			     
-
-						     
-						     <style>
-						     
-						     :root{
-   							 --bgColor: #FFFF00;
-							}
-
-							button{
-    								background-color: var(--bgColor);
-					   			cursor: pointer;
-							}
-							   
-								     </style>
-<br>						     
-<br>			     
-						     
-		<div style="float: left;">
-			<script type="text/javascript" src="https://www.comicad.net/r/5qVkEqHFkB/"></script>
-			<!-- Social Media Links -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://megacomixpublishing.com/index.html#" data-a2a-title="MegaComix Publishing">
-<a class="a2a_button_facebook" href="http://www.facebook.com/sharer.php?u=https://megacomixpublishing.com/index.html#" target="_blank"></a>
-<a class="a2a_button_twitter" href="https://twitter.com/share?url=https://megacomixpublishing.com/index.html#&amp;text=Support%20and%20Subscribe%20to%20our%20Newsletter!%20&amp;hashtags=indiecomics;SkyTitans;indieartists" target="_blank"></a>
-<a class="a2a_button_email" href="mailto:?Subject=The Sky-Titans Universe&amp;Body=Come%20and%20check%20this%20comic%20series%20out!!%20 https://megacomixpublishing.com/index.html"></a>
-<a class="a2a_button_tumblr" href="http://www.tumblr.com/share/link?url=https://megacomixpublishing.com/index.html#&amp;title=MegaComix Publishing" target="_blank""></a>
-</div>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- End to Social Media Links-->
-					 </div>
-				
-      
-        <br>
-	<br>
-	<br>									 
-										 
-												  
-										 
-	<style>
-										 
-   .about {
-   margin: 0 auto;
-   width: 15%;
-   background-color: transparent;
-}						 
-										 								 
-		 </style>									 
-		    
-</div>	
-													  	
-  <br>
-	<br>
-	<br>	  <br>
-	<br>
-												   
-						<style>
-							.img2 {
-								align="center";
-							}				   						   
-						</style>
-<br>
-<br>
-<br>	      
-<br>	
-<div style="color:gold;">
-<footer><center>In partnership with <a href="https://ticinc.online/">TIC STUDIOS LLC</center></a>
-	<form method="post" action="//submit.form" onSubmit="return validateForm();">
-<div style="max-width: 400px;">	      
-			      </div>
-<div style="padding-bottom: 18px;font-size : 24px;">NEWSLETTER SUBSCRIBER</div>
-<div style="padding-bottom: 18px;">NAME<span style="color: red;"> *</span><br/>
-<input type="text" id="data_2" name="data_2" style="max-width : 300px;" class="form-control"/>
-</div>
-<div style="padding-bottom: 18px;">EMAIL<span style="color: red;"> *</span><br/>
-<input type="text" id="data_4" name="data_4" style="max-width : 300px;" class="form-control"/>
-</div>
-<div style="padding-bottom: 18px;" "color:gold;"><input name="skip_Submit" value="SUBSCRIBE" type="submit"/></div>
-<div>
-<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-<script src="https://www.100forms.com/js/FORMKEY:EHBR7SAMA5GD/SEND:earthman270@yahoo.com" type="text/javascript"></script>
-</div>
-</form>
-																																						
-<script type="text/javascript">
-function validateForm() {
-if (isEmpty(document.getElementById('data_2').value.trim())) {
-alert('NAME is required!');
-return false;
-}
-if (isEmpty(document.getElementById('data_4').value.trim())) {
-alert('EMAIL is required!');
-return false;
-}
-if (!validateEmail(document.getElementById('data_4').value.trim())) {
-alert('EMAIL must be a valid email address!');
-return false;
-}
-return true;
-}
-function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-function validateEmail(email) {
-var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-return isEmpty(email) || re.test(email);
-}
-</script>						    
-	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-9cecaf4b-e559-4227-af00-1eb8ac962cb6"></div>	
-							     						      
-							   			
-</div>
-							      
-	 </footer>					
-														  
-														  
-													
 </body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
