@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta id="viewport" name="viewport">
+
+<script type="text/javascript">
+//mobile viewport hack
+(function(){
+
+  function apply_viewport(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)   ) {
+
+      var ww = window.screen.width;
+      var mw = 800; // min width of site
+      var ratio =  ww / mw; //calculate ratio
+      var viewport_meta_tag = document.getElementById('viewport');
+      if( ww < mw){ //smaller than minimum size
+        viewport_meta_tag.setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=no, width=' + mw);
+      }
+      else { //regular size
+        viewport_meta_tag.setAttribute('content', 'initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+      }
+    }
+  }
+
+  //ok, i need to update viewport scale if screen dimentions changed
+  window.addEventListener('resize', function(){
+    apply_viewport();
+  });
+
+  apply_viewport();
+
+}());
+</script>
+		
+<link rel="icon" type="image/png" href="https://i.imgur.com/eKoInVF.png"/>
+				
+		<style type=""text/css">
+
+* {
+  margin: 0;
+  font-size: 16px;
+  font-color: white;
+  
+}
+
+body{
+  background-image: url("https://i.imgur.com/0dGNWCz.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+#navbar{
+  display: grid;
+  background: transparent;
+  width: 100%;
+}
+
+#logo{
+  grid-column: 1;
+  font-size: 3rem;
+  margin-left: 30px;
+  margin-top: 0.25px;
+  text-decoration: overline;
+  color:#00303F;
+  
+}
+
+#secondary-logo{
+  grid-column: 1;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-left: 230px;
+  margin-top: 45px;
+  position: absolute;
+  color:#DCAE1D;
+}
+
+#navbarList{
+  display: grid;
+  
+  grid-column: 2;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  list-style: none;
+  margin-top: 45px;
+  margin-right: 10px;
+  
+ 
+}
+
+li a {
+  text-decoration: none;
+  color:#ffffff;
+  font-size: 1.1rem;
+  font-family: 'Monserat', arial;
+  text-transform: uppercase;
+  
+  
+}
+
+li a:hover {
+  color: #ffffff;
+}
+
+li a::before {
+ 
+  content: '';
+  display: block;
+  height: 3px;
+  Background: linear-gradient(45deg, #ffffff, rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
+  position: relative;
+  top: -5px;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+li a:hover::before {
+  width: 100%;
+  
+}
+
+
+@media screen and (min-width: 310px) and (max-width: 1140px) { 
+  #navbar{
+    grid-template-rows: 1fr 1fr;  
+    grid-template-columns: 1fr;
+    margin-right: 0;
+  }
+  
+  #navbarList{
+    grid-row: 2;
+    grid-column: 1;
+    padding-left: 10px;
+  }
+  
+  li a{
+    font-size: 1rem;
+    padding-right: 10px;
+    
+  }
+
+
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+	     
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+	     
+</style>							 
+							 
+							 
+							 
+<title>Home - MegaComix</title>
+</head>
+
+<body>
+
+<nav id="navbar">
+  <div id="logo"><a href="index.html"><img src="https://i.imgur.com/iofV8hD.png" title="source: imgur.com" /></a></div>
+													  
+<!-- I got these buttons from simplesharebuttons.com -->
+													  	
+
+
+
+  <ul id="navbarList">
+    <li><a href= "#"> Home </a> </li>
+     <li><a href= "#">Shop</a> </li>
+     <li><a href= "contact.html">Contact</a> </li>		
+  </ul> 
+</nav>
+
+<center><img src="https://imgur.com/i4HWVpF.png" width="480px" height="239px"/></center>
+
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.25rem;">
+          <p style= "color: #fff;">Physical Gloss Comic Book</p>
+          <select id="item-options"><option value="Cover #1" price="5">Cover #1 - 5 USD</option><option value="Cover #2" price="5">Cover #2 - 5 USD</option><option value="Cover #3" price="5">Cover #3 - 5 USD</option></select>
+          <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+        </div>
+      <div id="paypal-button-container"></div>
+      </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        var shipping = 1.00;
+        var itemOptions = document.querySelector("#smart-button-container #item-options");
+    var quantity = parseInt(5);
+    var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+    if (!isNaN(quantity)) {
+      quantitySelect.style.visibility = "visible";
+    }
+    var orderDescription = 'Physical Gloss Comic Book';
+    if(orderDescription === '') {
+      orderDescription = 'Item';
+    }
+    paypal.Buttons({
+      style: {
+        shape: 'pill',
+        color: 'blue',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+      createOrder: function(data, actions) {
+        var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+        var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        var tax = (4 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(4)/100));
+        if(quantitySelect.options.length > 0) {
+          quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+        } else {
+          quantity = 1;
+        }
+
+        tax *= quantity;
+        tax = Math.round(tax * 100) / 100;
+        var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+        priceTotal = Math.round(priceTotal * 100) / 100;
+        var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+
+        return actions.order.create({
+          purchase_units: [{
+            description: orderDescription,
+            amount: {
+              currency_code: 'USD',
+              value: priceTotal,
+              breakdown: {
+                item_total: {
+                  currency_code: 'USD',
+                  value: itemTotalValue,
+                },
+                shipping: {
+                  currency_code: 'USD',
+                  value: shipping,
+                },
+                tax_total: {
+                  currency_code: 'USD',
+                  value: tax,
+                }
+              }
+            },
+            items: [{
+              name: selectedItemDescription,
+              unit_amount: {
+                currency_code: 'USD',
+                value: selectedItemPrice,
+              },
+              quantity: quantity
+            }]
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      },
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
